@@ -1,4 +1,4 @@
-# OpenSSL default configuration file for creat
+# OpenSSL default configuration file for creation
 
 The self signed certification configuration file is **openssl_selfsigned.conf**. When creating a new set of keys it can be used using the -config option as shown below.
 
