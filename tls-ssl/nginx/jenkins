@@ -1,7 +1,7 @@
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
-        server_name 10.120.12.5;    # substitue with domain name or ip address
+        server_name <yourServerAddress>;    # substitue with domain name or ip address
         return 301 https://$server_name$request_uri; # 301 moved permanently    
 }
 server {
@@ -11,7 +11,7 @@ server {
         access_log /var/log/nginx/jenkins.access.log;
         error_log /var/log/nginx/jenkins.error.log;
 
-        server_name 10.120.12.5; # substitue with domain name or ip address
+        server_name <yourServerAddress>; # substitue with domain name or ip address
         include snippets/self-signed.conf;
         include snippets/ssl-params.conf;
         location / {
@@ -19,6 +19,6 @@ server {
                 proxy_pass          http://localhost:8080;
                 proxy_read_timeout  90s;
                 # Fix potential "It appears that your reverse proxy setup is broken" error.
-                proxy_redirect      http://localhost:8080 https://10.120.12.5; # substitue with domain name or ip address
+                proxy_redirect      http://localhost:8080 https://<yourServerAddress>; # substitue with domain name or ip address
         }
 }
