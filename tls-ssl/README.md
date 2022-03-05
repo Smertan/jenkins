@@ -13,7 +13,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 
 # Viewing the certificate
 ```
-openssl x509 -in localhost.crt -text
+openssl x509 -in /etc/ssl/certs/nginx-selfsigned.crt -text
 ```
 
 # self-signed.conf Nginx location
