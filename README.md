@@ -1,8 +1,8 @@
-# ssl-tls
+# TLS/SSL
 Open ssl configuration files
 
-
 Self signed certification configuration file = openssl_selfsigned.conf
+
 
 # Create a Certificate using OpenSSL
 
@@ -13,7 +13,9 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 ```
 
 # Viewing the certificate
+```
 openssl x509 -in localhost.crt -text
+```
 
 # self-signed.conf location
 
