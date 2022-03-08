@@ -19,3 +19,8 @@ openssl x509 -in /etc/ssl/certs/nginx-selfsigned.crt -text
 # self-signed.conf Nginx location
 
 The file lets Nginx know the location of the certificate and key. It should be placed in the following directory /etc/nginx/snippets/
+
+# Diffie Hellman group creation command
+```
+sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+```
